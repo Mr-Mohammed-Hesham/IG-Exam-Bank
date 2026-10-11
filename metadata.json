@@ -1,0 +1,6 @@
+{
+  "name": "4U - IGCSE Edexcel Platform | منصة امتحانات IG للرياضيات والفيزياء",
+  "description": "منصة امتحانات Pearson Edexcel International GCSE (9-1) الشاملة لمادتي الرياضيات (4MA1) والفيزياء (4PH1 / 4SD0) بإشراف Mr. Mohammed Hesham.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
