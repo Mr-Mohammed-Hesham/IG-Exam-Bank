@@ -24,6 +24,7 @@ export const AppLogo: React.FC<AppLogoProps> = ({
           className="w-full h-full object-contain"
         >
           <defs>
+            {/* Gradient for '4' */}
             <linearGradient id="logo-grad-four" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#1e1b4b" />
               <stop offset="35%" stopColor="#1e3a8a" />
@@ -31,12 +32,19 @@ export const AppLogo: React.FC<AppLogoProps> = ({
               <stop offset="100%" stopColor="#3b82f6" />
             </linearGradient>
 
+            {/* Gradient for 'U' */}
             <linearGradient id="logo-grad-u" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#064e3b" />
-              <stop offset="35%" stopColor="#0d9488" />
-              <stop offset="75%" stopColor="#14b8a6" />
-              <stop offset="100%" stopColor="#2dd4bf" />
+              <stop offset="0%" stopColor="#4c1d95" />
+              <stop offset="35%" stopColor="#7e22ce" />
+              <stop offset="75%" stopColor="#9333ea" />
+              <stop offset="100%" stopColor="#c084fc" />
             </linearGradient>
+
+            {/* Glow for Cap Bulb */}
+            <filter id="logo-bulb-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
           </defs>
 
           {/* Number 4 */}
@@ -53,70 +61,77 @@ export const AppLogo: React.FC<AppLogoProps> = ({
 
           {/* Graduation Cap and Lightbulb on right branch of U */}
           <g transform="translate(472, 138) scale(0.96)">
+            {/* Lightbulb outline & glow */}
             <path
               d="M0 -75 C-26 -75 -42 -55 -42 -30 C-42 -12 -30 2 -20 16 L-20 30 L20 30 L20 16 C30 2 42 -12 42 -30 C42 -55 26 -75 0 -75 Z"
               fill="none"
-              stroke="#38bdf8"
+              stroke="#2563eb"
               strokeWidth="7"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
+            {/* Filament */}
             <path
               d="M-12 10 L-12 -22 C-12 -32 -6 -38 0 -38 C6 -38 12 -32 12 -22 L12 10"
               fill="none"
-              stroke="#2dd4bf"
+              stroke="#3b82f6"
               strokeWidth="5"
               strokeLinecap="round"
             />
             <path
               d="M-7 -10 L7 -10"
-              stroke="#2dd4bf"
+              stroke="#3b82f6"
               strokeWidth="5"
               strokeLinecap="round"
             />
+            {/* Screw base */}
             <path
               d="M-16 34 L16 34 M-13 42 L13 42 M-9 50 L9 50"
-              stroke="#38bdf8"
+              stroke="#2563eb"
               strokeWidth="5"
               strokeLinecap="round"
             />
+
+            {/* Graduation Cap */}
             <polygon
               points="0,35 72,58 0,81 -72,58"
               fill="#0f172a"
-              fillOpacity="0.3"
-              stroke="#38bdf8"
+              fillOpacity="0.1"
+              stroke="#2563eb"
               strokeWidth="7"
               strokeLinejoin="round"
             />
             <path
               d="M-40 68 C-40 92 40 92 40 68"
               fill="none"
-              stroke="#38bdf8"
+              stroke="#2563eb"
               strokeWidth="7"
               strokeLinecap="round"
             />
             <path
               d="M-36 78 C-36 100 36 100 36 78"
               fill="none"
-              stroke="#2dd4bf"
+              stroke="#3b82f6"
               strokeWidth="4.5"
               strokeLinecap="round"
             />
-            <circle cx="0" cy="58" r="4.5" fill="#38bdf8" />
+
+            {/* Tassel Button & String */}
+            <circle cx="0" cy="58" r="4.5" fill="#2563eb" />
             <path
               d="M0 58 Q48 68 58 92"
               fill="none"
-              stroke="#38bdf8"
+              stroke="#2563eb"
               strokeWidth="5"
               strokeLinecap="round"
             />
-            <rect x="54" y="92" width="9" height="18" rx="3" fill="#38bdf8" />
+            <rect x="54" y="92" width="9" height="18" rx="3" fill="#2563eb" />
           </g>
         </svg>
       </div>
       {showText && (
         <span className="font-extrabold tracking-tight text-white font-sans">
-          4U <span className="text-emerald-400 font-medium text-xs">IGCSE</span>
+          4U <span className="text-indigo-400 font-medium text-xs">IGCSE</span>
         </span>
       )}
     </div>
